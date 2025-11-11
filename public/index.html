@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow - Organize Your Life, Boost Your Productivity</title>
+    <meta name="description" content="A modern task management application to help you stay organized and productive.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Landing Page -->
+    <div id="landing-page" class="page active">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <i data-lucide="check-circle-2" class="logo-icon"></i>
+                    <h2>TaskFlow</h2>
+                </div>
+                <div class="nav-actions">
+                    <button class="btn btn-outline" onclick="showAuthModal('login')">Login</button>
+                    <button class="btn btn-primary" onclick="showAuthModal('signup')">Get Started</button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        Organize Your Tasks,
+                        <span class="gradient-text">Boost Your Productivity</span>
+                    </h1>
+                    <p class="hero-description">
+                        A modern, intuitive task management app designed to help you stay focused, 
+                        organized, and achieve your goals with ease.
+                    </p>
+                    <div class="hero-actions">
+                        <button class="btn btn-primary btn-large" onclick="showAuthModal('signup')">
+                            Start Organizing
+                            <i data-lucide="arrow-right" class="btn-icon"></i>
+                        </button>
+                        <button class="btn btn-ghost btn-large" onclick="scrollToFeatures()">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="floating-card card-1">
+                        <div class="card-header">
+                            <div class="card-dots">
+                                <span></span><span></span><span></span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="task-item completed">
+                                <input type="checkbox" checked disabled>
+                                <span>Complete project proposal</span>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" disabled>
+                                <span>Review team feedback</span>
+                            </div>
+                            <div class="task-item">
+                                <input type="checkbox" disabled>
+                                <span>Schedule meeting</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="floating-card card-2">
+                        <div class="card-header">
+                            <div class="card-dots">
+                                <span></span><span></span><span></span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="stats">
+                                <div class="stat">
+                                    <span class="stat-number">12</span>
+                                    <span class="stat-label">Tasks Done</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number">3</span>
+                                    <span class="stat-label">In Progress</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features" id="features">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Everything you need to stay productive</h2>
+                    <p>Powerful features designed to streamline your workflow</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i data-lucide="list-checks"></i>
+                        </div>
+                        <h3>Smart Task Management</h3>
+                        <p>Create, organize, and track your tasks with intuitive priority levels and due dates.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i data-lucide="zap"></i>
+                        </div>
+                        <h3>Lightning Fast</h3>
+                        <p>Built for speed with modern technology stack for instant responsiveness.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i data-lucide="smartphone"></i>
+                        </div>
+                        <h3>Mobile Ready</h3>
+                        <p>Access your tasks anywhere with our fully responsive design.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Ready to boost your productivity?</h2>
+                    <p>Join thousands of users who have transformed their workflow with TaskFlow.</p>
+                    <button class="btn btn-primary btn-large" onclick="showAuthModal('signup')">
+                        Get Started Free
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <h3>TaskFlow</h3>
+                        <p>Organize your life, boost your productivity.</p>
+                    </div>
+                    <div class="footer-links">
+                        <a href="#features">Features</a>
+                        <a href="#" onclick="showAuthModal('login')">Login</a>
+                        <a href="#" onclick="showAuthModal('signup')">Sign Up</a>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 TaskFlow. Built with <i data-lucide="heart" class="heart-icon"></i> for productivity.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- App Page -->
+    <div id="app-page" class="page">
+        <!-- App Header -->
+        <header class="app-header">
+            <div class="app-container">
+                <div class="app-logo">
+                    <i data-lucide="check-circle-2" class="logo-icon"></i>
+                    <h2>TaskFlow</h2>
+                </div>
+                <div class="app-actions">
+                    <span class="user-greeting" id="user-greeting">
+                        <i data-lucide="user" class="greeting-icon"></i>
+                        Welcome back!
+                    </span>
+                    <button class="btn btn-outline btn-sm" onclick="logout()">
+                        <i data-lucide="log-out" class="btn-icon-sm"></i>
+                        Logout
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- App Content -->
+        <main class="app-main">
+            <div class="app-container">
+                <!-- Task Controls -->
+                <div class="task-controls">
+                    <div class="task-header">
+                        <h1>
+                            <i data-lucide="clipboard-list" class="header-icon"></i>
+                            My Tasks
+                        </h1>
+                        <div class="task-stats" id="task-stats">
+                            <span class="stat">
+                                <i data-lucide="list" class="stat-icon"></i>
+                                0 total
+                            </span>
+                            <span class="stat">
+                                <i data-lucide="check-circle" class="stat-icon"></i>
+                                0 completed
+                            </span>
+                        </div>
+                    </div>
+                    <div class="task-filters">
+                        <i data-lucide="filter" class="filter-icon"></i>
+                        <select id="sort-select" class="filter-select">
+                            <option value="createdAt-desc">Newest First</option>
+                            <option value="createdAt-asc">Oldest First</option>
+                            <option value="dueDate-asc">Due Date (Earliest)</option>
+                            <option value="dueDate-desc">Due Date (Latest)</option>
+                            <option value="priority-desc">Priority (High to Low)</option>
+                            <option value="priority-asc">Priority (Low to High)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Add Task Form -->
+                <div class="add-task-section">
+                    <form id="add-task-form" class="add-task-form">
+                        <div class="form-row">
+                            <input type="text" id="task-title" placeholder="What needs to be done?" required>
+                            <input type="text" id="task-description" placeholder="Description (optional)">
+                        </div>
+                        <div class="form-row">
+                            <input type="date" id="task-due-date">
+                            <select id="task-priority" class="priority-select">
+                                <option value="LOW">Low Priority</option>
+                                <option value="MEDIUM" selected>Medium Priority</option>
+                                <option value="HIGH">High Priority</option>
+                                <option value="URGENT">Urgent</option>
+                            </select>
+                            <button type="submit" class="btn btn-primary">
+                                <i data-lucide="plus" class="btn-icon-sm"></i>
+                                Add Task
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Tasks List -->
+                <div class="tasks-section">
+                    <h2 class="tasks-section-title">Your Tasks</h2>
+                    <div class="tasks-section-divider"></div>
+                    <div id="tasks-list" class="tasks-list">
+                        <!-- Tasks will be dynamically inserted here -->
+                    </div>
+                    <div id="empty-state" class="empty-state">
+                        <div class="empty-icon">
+                            <i data-lucide="inbox"></i>
+                        </div>
+                        <h3>No tasks yet</h3>
+                        <p>Add your first task above to get started!</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Auth Modal -->
+    <div id="auth-modal" class="modal">
+        <div class="modal-backdrop" onclick="hideAuthModal()"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-title">Welcome to TaskFlow</h2>
+                <button class="modal-close" onclick="hideAuthModal()">
+                    <i data-lucide="x"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="auth-tabs">
+                    <button class="tab-btn active" data-tab="login">Login</button>
+                    <button class="tab-btn" data-tab="signup">Sign Up</button>
+                </div>
+                
+                <form id="auth-form" class="auth-form">
+                    <div id="name-field" class="form-group" style="display: none;">
+                        <label for="auth-name">Full Name</label>
+                        <input type="text" id="auth-name" placeholder="Enter your full name">
+                    </div>
+                    <div class="form-group">
+                        <label for="auth-email">Email</label>
+                        <input type="email" id="auth-email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="auth-password">Password</label>
+                        <input type="password" id="auth-password" placeholder="Enter your password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <span id="auth-submit-text">Login</span>
+                    </button>
+                </form>
+                
+                <div id="auth-message" class="auth-message"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="loading-overlay">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <script src="js/particles.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        // Initialize Lucide icons
+        document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+        });
+    </script>
+</body>
+</html>
