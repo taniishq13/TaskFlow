@@ -826,13 +826,13 @@ body {
 
 /* App Page Styles */
 .app-header {
-    background: rgba(10, 10, 10, 0.95);
-    border-bottom: 1px solid rgba(219, 39, 119, 0.3);
+    background: rgba(246, 245, 245, 0.95);
+    border-bottom: 1px solid rgba(38, 1, 223, 0.1);
     padding: var(--spacing-md) 0;
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(20px);
 }
 
@@ -969,7 +969,7 @@ body {
     padding: var(--spacing-sm) var(--spacing-md);
     border: 2px solid var(--border-color);
     border-radius: var(--radius-lg);
-    background: rgba(10, 10, 10, 0.5);
+    background: rgba(255, 255, 255, 0.818);
     color: var(--text-primary);
     font-size: var(--font-size-sm);
     cursor: pointer;
@@ -984,12 +984,12 @@ body {
 
 /* Add Task Form */
 .add-task-section {
-    background: rgba(26, 26, 26, 0.8);
+    background: rgba(255, 254, 254, 0.582);
     border-radius: var(--radius-xl);
     padding: var(--spacing-xl);
     margin-bottom: var(--spacing-md);
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(219, 39, 119, 0.1);
-    border: 1px solid rgba(219, 39, 119, 0.3);
+    box-shadow: 0 10px 40px rgba(14, 14, 14, 0.2), 0 0 1px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(59, 77, 213, 0.3);
     position: relative;
     backdrop-filter: blur(10px);
 }
@@ -1003,7 +1003,6 @@ body {
     width: 4px;
     border-radius: 4px;
     background: linear-gradient(180deg, var(--primary-color), var(--secondary-color));
-    box-shadow: 0 0 10px rgba(219, 39, 119, 0.5);
 }
 
 .add-task-form {
@@ -1023,11 +1022,11 @@ body {
     flex: 1;
     min-width: 200px;
     padding: var(--spacing-md);
-    background: rgba(10, 10, 10, 0.5);
+    background: rgba(227, 222, 222, 0.596);
     border: 2px solid var(--border-color);
     border-radius: var(--radius-lg);
     font-size: var(--font-size-sm);
-    color: var(--text-primary);
+    color: var(--text-primary); 
     transition: all var(--transition-fast);
 }
 
@@ -1035,8 +1034,7 @@ body {
 .form-row select:focus {
     outline: none;
     border-color: var(--primary-color);
-    background: rgba(10, 10, 10, 0.8);
-    box-shadow: 0 0 15px rgba(219, 39, 119, 0.3);
+    background: rgba(218, 215, 215, 0.8);
 }
 
 .form-row input::placeholder {
@@ -1049,11 +1047,11 @@ body {
 
 /* Tasks List */
 .tasks-section {
-    background: rgba(26, 26, 26, 0.8);
+    background: rgba(246, 245, 245, 0.95);
     border-radius: var(--radius-xl);
     padding: var(--spacing-xl);
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(219, 39, 119, 0.1);
-    border: 1px solid rgba(219, 39, 119, 0.3);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(16, 38, 238, 0.3);
     position: relative;
     backdrop-filter: blur(10px);
 }
@@ -1067,7 +1065,6 @@ body {
     width: 4px;
     border-radius: 4px;
     background: linear-gradient(180deg, var(--primary-light), var(--primary-color));
-    box-shadow: 0 0 10px rgba(244, 114, 182, 0.5);
 }
 
 .tasks-section-title {
@@ -1077,10 +1074,10 @@ body {
 }
 
 .tasks-section-divider {
-    height: 2px;
-    background: linear-gradient(90deg, rgba(219, 39, 119, 0.5), transparent 60%);
+    height: 3px;
+    background: rgb(13, 13, 228,0.6);
     margin: var(--spacing-sm) 0 var(--spacing-md);
-    box-shadow: 0 0 10px rgba(219, 39, 119, 0.3);
+    border-radius: var(--radius-sm);
 }
 
 .tasks-list {
